@@ -1,0 +1,24 @@
+{
+  "name": "bombswap-subgraph",
+  "version": "1.0.0",
+  "repository": "https://github.com/solarbeamio/solarbeam-subgraph",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "codegen": "graph codegen --output-dir src/types/",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ faheelsattar/bombswap",
+    "create-local": "graph create --node http://localhost:8020/ faheelsattar/bombswap",
+    "remove-local": "graph remove --node http://localhost:8020/ faheelsattar/bombswap",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 faheelsattar/bombswap"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.16.0",
+    "@graphprotocol/graph-ts": "^0.16.0",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "prettier": "^1.18.2",
+    "typescript": "^3.5.2"
+  }
+}
